@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--p名称空间-->
+<!--xmlns:p="http://www.springframework.org/schema/p"-->
+<!--使用注解开发引入context约束-->
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--abase-->
+    <bean id="bean_a" class="janine.abase.BasicImpl"></bean>
+
+
+    <!--bcus-->
+    <bean id="bean_b" class="janine.bcus.CustomerDAOImpl" init-method="setup" destroy-method="destroy"></bean>
+
+
+    <!--ccar-->
+    <!--spring属性注入的方式-->
+    <!--构造方法的方式-->
+    <bean id="car" class="janine.ccar.Car">
+        <constructor-arg name="name" value="宝马"/>
+        <constructor-arg name="price" value="800000"/>
+    </bean>
+    <!--set方法的方式-->
+    <bean id="car2" class="janine.ccar.Car2">
+        <property name="name" value="奔驰"/>
+        <property name="price" value="1000000"/>
+    </bean>
+    <!--set方法注入对象类型的属性-->
+    <bean id="employee" class="janine.ccar.Employee">
+        <!--value：设置普通类型的值，ref：设置其他类的id/name-->
+        <property name="name" value="哥哥"/>
+        <property name="car2" ref="car2"/>
+    </bean>
+    <!--使用p名称空间-->
+    <bean id="employee2" class="janine.ccar.Employee" p:name="Janine" p:car2-ref="car2"></bean>
+    <!--SpELl的属性注入-->
+    <bean id="carInfo" class="janine.ccar.CarInfo"></bean>
+    <bean id="employeeSpEL" class="janine.ccar.Employee">
+        <!--#{content} 可以是表达式-->
+        <property name="name" value="#{'咦 哥哥？'}"></property>
+        <property name="car2" value="#{car2}"></property>
+    </bean>
+    <bean id="car3" class="janine.ccar.Car2">
+        <property name="name" value="#{carInfo.name}"></property>
+        <!--<property name="price" value="#{3000}"></property>-->
+        <property name="price" value="#{carInfo.calculatorPrice()}"></property>
+    </bean>
+
+
+    <!--dcollections-->
+    <!--集合属性的注入-->
+    <!--注入数组类型-->
+    <bean id="collectionBean" class="janine.dcollections.CollectionBeanImpl">
+        <!--数组类型-->
+        <property name="arrs">
+            <list>
+                <!--普通类型的数组用value-->
+                <value>哥哥</value>
+                <value>阿喵</value>
+                <value>狗DL</value>
+                <value>村村</value>
+                <!--特殊类型的数组用ref-->
+                <!--<ref/>-->
+            </list>
+        </property>
+        <!--注入list集合-->
+        <property name="list">
+            <list>
+                <value>无忌</value>
+                <value>亚旭</value>
+                <value>杨嘉</value>
+            </list>
+        </property>
+        <!--注入set集合-->
+        <property name="set">
+            <set>
+                <value>sss</value>
+                <value>eee</value>
+                <value>ttt</value>
+            </set>
+        </property>
+        <!--注入map集合-->
+        <property name="map">
+            <map>
+                <entry key="aaa" value="111"></entry>
+                <entry key="bbb" value="222"></entry>
+                <entry key="ccc" value="333"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--引入别的配置文件-->
+    <!--<import resource="applicationContext.xml"/>-->
+
+    <!--eanno1-->
+    <!--spring IOC 的注解配置-->
+    <!--使用IOC的注解开发，配置扫描(哪些包下的类使用IOC的注解-->
+    <context:component-scan base-package="janine.eanno1"></context:component-scan>
+
+
+</beans>
