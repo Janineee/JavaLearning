@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+    <!-- 加载配置文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- 数据库连接池 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 连接池的最大数据库连接数 -->
+        <!--<property name="maxActive" value="10" />-->
+        <!-- 最大空闲数 -->
+        <!--<property name="maxIdle" value="5" />-->
+    </bean>
+
+    <!--配置SqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--加载mybaby核心配置文件-->
+        <property name="configLocation" value="classpath:SqlMapConfig.xml"/>
+        <!--<property name="mapperLocations" value="classpath:mappers/*"/>-->
+        <!--配置别名包扫描-->
+        <!--<property name="typeAliasesPackage" value="com.janine.sm.pojo"/>-->
+    </bean>
+
+    <!--传统Dao配置-->
+    <!--<bean id="userDao" class="com.janine.dao.impl.UserDaoImpl">-->
+    <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;动态代理Dao开发, 第一种方式&ndash;&gt;-->
+    <!--<bean id="baseMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" abstract="true" lazy-init="true">-->
+    <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+    <!--&lt;!&ndash;用户动态代理扫描&ndash;&gt;-->
+    <!--<bean parent="baseMapper">-->
+    <!--<property name="mapperInterface" value="com.janine.mapper.UserMapper"/>-->
+    <!--</bean>-->
+
+    <!--动态代理，第二种&#45;&#45;包扫描(推荐-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.janine.sm.mapper"/>
+    </bean>
+
+
+</beans>
