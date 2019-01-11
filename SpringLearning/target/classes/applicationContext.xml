@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--p名称空间-->
+<!--xmlns:p="http://www.springframework.org/schema/p"-->
+<!--使用注解开发引入context约束-->
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd"
+>
+
+    <!--abase-->
+    <bean id="bean_a" class="janine.abase.BasicImpl"></bean>
+
+
+    <!--bcus-->
+    <bean id="bean_b" class="janine.bcus.CustomerDAOImpl" init-method="setup" destroy-method="destroy"></bean>
+
+
+    <!--ccar-->
+    <!--spring属性注入的方式-->
+    <!--构造方法的方式-->
+    <bean id="car" class="janine.ccar.Car">
+        <constructor-arg name="name" value="宝马"/>
+        <constructor-arg name="price" value="800000"/>
+    </bean>
+    <!--set方法的方式-->
+    <bean id="car2" class="janine.ccar.Car2">
+        <property name="name" value="奔驰"/>
+        <property name="price" value="1000000"/>
+    </bean>
+    <!--set方法注入对象类型的属性-->
+    <bean id="employee" class="janine.ccar.Employee">
+        <!--value：设置普通类型的值，ref：设置其他类的id/name-->
+        <property name="name" value="哥哥"/>
+        <property name="car2" ref="car2"/>
+    </bean>
+    <!--使用p名称空间-->
+    <bean id="employee2" class="janine.ccar.Employee" p:name="Janine" p:car2-ref="car2"></bean>
+    <!--SpELl的属性注入-->
+    <bean id="carInfo" class="janine.ccar.CarInfo"></bean>
+    <bean id="employeeSpEL" class="janine.ccar.Employee">
+        <!--#{content} 可以是表达式-->
+        <property name="name" value="#{'咦 哥哥？'}"></property>
+        <property name="car2" value="#{car2}"></property>
+    </bean>
+    <bean id="car3" class="janine.ccar.Car2">
+        <property name="name" value="#{carInfo.name}"></property>
+        <!--<property name="price" value="#{3000}"></property>-->
+        <property name="price" value="#{carInfo.calculatorPrice()}"></property>
+    </bean>
+
+
+    <!--dcollections-->
+    <!--集合属性的注入-->
+    <!--注入数组类型-->
+    <bean id="collectionBean" class="janine.dcollections.CollectionBeanImpl">
+        <!--数组类型-->
+        <property name="arrs">
+            <list>
+                <!--普通类型的数组用value-->
+                <value>哥哥</value>
+                <value>阿喵</value>
+                <value>狗DL</value>
+                <value>村村</value>
+                <!--特殊类型的数组用ref-->
+                <!--<ref/>-->
+            </list>
+        </property>
+        <!--注入list集合-->
+        <property name="list">
+            <list>
+                <value>无忌</value>
+                <value>亚旭</value>
+                <value>杨嘉</value>
+            </list>
+        </property>
+        <!--注入set集合-->
+        <property name="set">
+            <set>
+                <value>sss</value>
+                <value>eee</value>
+                <value>ttt</value>
+            </set>
+        </property>
+        <!--注入map集合-->
+        <property name="map">
+            <map>
+                <entry key="aaa" value="111"></entry>
+                <entry key="bbb" value="222"></entry>
+                <entry key="ccc" value="333"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <!--引入别的配置文件-->
+    <!--<import resource="applicationContext.xml"/>-->
+
+    <!--eanno1-->
+    <!--spring IOC 的注解配置-->
+    <!--使用IOC的注解开发，配置扫描(哪些包下的类使用IOC的注解-->
+    <context:component-scan base-package="janine.eanno1"></context:component-scan>
+
+
+    <!--fanno2-->
+    <context:component-scan base-package="janine.fanno2"></context:component-scan>
+
+
+    <!--gxmlanno-->
+    <!--扫描是为了扫描类上的注解-->
+    <!--<context:component-scan base-package="janine.gxmlanno"></context:component-scan>-->
+    <!--没开扫描的时候用 注解就可以使用这条-->
+    <!--<context:annotation-config/>-->
+
+    <bean id="productService" class="janine.gxmlanno.ProductService"></bean>
+    <!--因命名冲突改了个名儿昂-->
+    <bean id="productDao1" class="janine.gxmlanno.ProductDao"></bean>
+    <bean id="orderDao" class="janine.gxmlanno.OrderDao"></bean>
+
+
+    <!--haop-->
+
+
+    <!--iaop-->
+    <!--<context:annotation-config/>-->
+    <bean id="productDao" class="janine.iaop.ProductDaoImpl"></bean>
+    <bean id="myAspect" class="janine.iaop.MyAspectXML"></bean>
+    <!--<context:component-scan base-package="janine.iaop"/>-->
+
+    <aop:config>
+        <!--*: 任意返回值 ..:任意参数-->
+        <aop:pointcut id="pt1" expression="execution(* janine.iaop.ProductDaoImpl.delete(..))"/>
+        <aop:aspect ref="myAspect">
+            <!--前置通知-->
+            <aop:before method="checkPri" pointcut-ref="pt1"/>
+            <!--后置通知，不是after哦~-->
+            <aop:after-returning method="writeLog" pointcut-ref="pt1" returning="随便写"/>
+            <!--环绕通知，在目标方法执行之前和之后进行操作-->
+            <!--可以阻止目标方法的执行-->
+            <aop:around method="around" pointcut-ref="pt1"/>
+            <!--异常抛出通知-->
+            <aop:after-throwing method="afterThrowing" pointcut-ref="pt1" throwing="ex"/>
+            <aop:after method="after" pointcut-ref="pt1"/>
+        </aop:aspect>
+    </aop:config>
+
+
+    <!--jaopanno-->
+    <!--配置目标类-->
+    <bean id="janineDao" class="janine.jaopanno.JanineDao"></bean>
+    <!--配置切面类-->
+    <bean id="myAspect2" class="janine.jaopanno.JanineAspectAnno"></bean>
+
+    <!--在配置文件中开启注解的AOP开发-->
+    <aop:aspectj-autoproxy/>
+
+
+    <!--==========================================================================-->
+    <!--<context:component-scan base-package="springjdbc"/>-->
+    <!--spring JDBC-->
+    <!--springjdbc-->
+    <!--配置Spring内置的连接池-->
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+    <!--&lt;!&ndash;属性注入&ndash;&gt;-->
+    <!--<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--<property name="url" value="jdbc:mysql://localhost:3306/db1?serverTimezone= UTC&amp;characterEncoding=utf-8"/>-->
+    <!--<property name="username" value="root"/>-->
+    <!--<property name="password" value="janine"/>-->
+    <!--</bean>-->
+    <!--配置Spring的JDBC模板-->
+    <!--因重复注释-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+    <!--配置DBCP连接池-->
+    <!--<bean id="dataSource2" class="org.apache.commons.dbcp2.BasicDataSource">-->
+    <!--<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--<property name="url" value="jdbc:mysql://localhost:3306/db1?serverTimezone= UTC&amp;characterEncoding=utf-8"/>-->
+    <!--<property name="username" value="root"/>-->
+    <!--<property name="password" value="janine"/>-->
+    <!--</bean>-->
+    <!--配置spring的JDBC模板-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource2"/>-->
+    <!--</bean>-->
+
+    <!--配置C3P0连接池-->
+    <!--<bean id="dataSource3" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+    <!--<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>-->
+    <!--<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/db1?serverTimezone= UTC&amp;characterEncoding=utf-8"/>-->
+    <!--<property name="user" value="root"/>-->
+    <!--<property name="password" value="janine"/>-->
+    <!--</bean>-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource3"/>-->
+    <!--</bean>-->
+
+    <!--引入属性文件-->
+    <!--第一种方式-->
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+    <!--<property name="location" value="classpath:jdbc.properties"/>-->
+    <!--</bean>-->
+    <!--第二种方式 通过context标签引入-->
+    <!--<context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <!--这样使用-->
+    <!--<bean id="dataSource4" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+    <!--<property name="driverClass" value="${jdbc_driver}"/>-->
+    <!--<property name="jdbcUrl" value="${db_url}"/>-->
+    <!--<property name="user" value="${db_user}"/>-->
+    <!--<property name="password" value="${db_password}"/>-->
+    <!--</bean>-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource4"/>-->
+    <!--</bean>-->
+
+
+    <!--springtx-->
+    <context:component-scan base-package="springtx"/>
+    <!--配置service-->
+    <!--<bean id="" class="springtx.AccountServiceImpl">-->
+    <!---->
+    <!--</bean>-->
+    <!--配置dao-->
+    <!--<bean id="" class="springtx.AccountDaoImpl">-->
+
+    <!--</bean>-->
+
+    <!--配置连接池和JDBC模板-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc_driver}"/>
+        <property name="jdbcUrl" value="${db_url}"/>
+        <property name="user" value="${db_user}"/>
+        <property name="password" value="${db_password}"/>
+    </bean>
+    <!--<bean id="accountDao" class="springtx.AccountDaoImpl">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+    <!--<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+    <!--配置平台事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--配置事务管理的模板-->
+    <!--<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">-->
+    <!--<property name="transactionManager" ref="transactionManager"/>-->
+    <!--</bean>-->
+
+    <!--配置事务的增强-->
+    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">-->
+        <!--<tx:attributes>-->
+            <!--&lt;!&ndash;事务管理规则&ndash;&gt;-->
+            <!--&lt;!&ndash;<tx:method name="save*" propagation="REQUIRED"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tx:method name="update*" propagation="REQUIRED"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tx:method name="delete*" propagation="REQUIRED"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tx:method name="find*" propagation="REQUIRED"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;这里面可以配置只读、时间等等&ndash;&gt;-->
+            <!--<tx:method name="*" propagation="REQUIRED"/>-->
+        <!--</tx:attributes>-->
+    <!--</tx:advice>-->
+
+    <!--AOP配置-->
+    <!--<aop:config>-->
+        <!--&lt;!&ndash;一个通知一个切入点&ndash;&gt;-->
+        <!--<aop:pointcut id="pointcut1" expression="execution(* springtx.AccountServiceImpl.*(..))"/>-->
+        <!--&lt;!&ndash;多个切入点和多个通知的组合&ndash;&gt;-->
+        <!--<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut1"/>-->
+    <!--</aop:config>-->
+
+    <!--注解事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>

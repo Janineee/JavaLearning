@@ -16,11 +16,11 @@ public class CollectionBeanImplTest {
         System.out.println(collectionBean.toString());
     }
 
-    @Test
-    public void toStringTest2() {
-        ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/main/java/applicationContext.xml");
-        UserDAOImpl collectionBean = (UserDAOImpl) applicationContext.getBean("testDao");
-        System.out.println(collectionBean.toString());
-    }
+    // @Test
+    // public void toStringTest2() {
+    //     ApplicationContext applicationContext = new FileSystemXmlApplicationContext("src/main/java/applicationContext.xml");
+    //     UserDAOImpl collectionBean = (UserDAOImpl) applicationContext.getBean("testDao");
+    //     System.out.println(collectionBean.toString());
+    // }
 
 }
