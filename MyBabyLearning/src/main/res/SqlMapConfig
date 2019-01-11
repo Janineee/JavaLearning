@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--先加载内部标签，再加载外部文件，名称一致时会替换内容-->
+    <properties resource="jdbc.properties">
+        <property name="jdbc.username" value="doge"/>
+        <!--<property name="mapperLocations" value="classpath:com/janine/mapper/UserMapper.xml"></property>-->
+    </properties>
+
+    <typeAliases>
+        <!--单个定义别名，不区分大小写-->
+        <!--<typeAlias type="com.janine.pojo.User" alias="user"/>-->
+        <!--别名包扫描器，别名是类的全称，不包含大小写，推荐方式-->
+        <package name="com.janine.pojo"/>
+    </typeAliases>
+
+    <!-- 和spring整合后 environments配置将废除 -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 使用jdbc事务管理 -->
+            <transactionManager type="JDBC" />
+            <!-- 数据库连接池 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url"
+                          value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--加载映射文件-->
+    <mappers>
+        <mapper resource="mybaby/user.xml"/>
+        <!--<mapper resource="mybaby/UserMapper.xml"/>-->
+        <!--映射文件，class扫描器
+        接口文件必须与映射文件同一目录下
+        接口文件名称与映射文件名称一致
+        -->
+        <mapper class="com.janine.mapper.UserMapper"/>
+
+    </mappers>
+
+</configuration>

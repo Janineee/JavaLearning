@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="46dce061-6ce3-43b0-9239-a778fcb5cefe" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/OrderMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="744">
+              <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>resource</find>
+      <find>collec</find>
+      <find>colle</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/log4j.properties" />
+        <option value="$PROJECT_DIR$/config/SqlMapConfig" />
+        <option value="$PROJECT_DIR$/config/mybaby/user.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/util/SqlSessionFactoryUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/janine/other/FirstUseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/other/FirstUse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/traditional/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/traditional/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/res/mybaby/user.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/janine/traditional/dao/impl/UserDaoImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/res/mybaby/UserMapper.fxml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/janine/mapper/UserMapperImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/res/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/res/mybaby/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/SqlMapConfig" />
+        <option value="$PROJECT_DIR$/target/classes/SqlMapConfig" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/pojo/QueryVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/pojo/OrderUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/janine/mapper/OrderMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/pojo/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/mapper/OrderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/janine/mapper/UserMapperTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Development/Maven/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="348" />
+    <option name="width" value="1755" />
+    <option name="height" value="1399" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="janine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="janine" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="janine" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="mybaby" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="janine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyBabyLearning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyBabyLearning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="janine" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546590168196" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.16741405" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.janine.mapper" />
+      <recent name="com.janine.traditional.dao.impl" />
+      <recent name="com.janine.other" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Works\MyBabyLearning\src\main\res\mybaby" />
+      <recent name="E:\Works\MyBabyLearning\src\main\res" />
+      <recent name="E:\Works\MyBabyLearning\src\main" />
+      <recent name="E:\Works\MyBabyLearning\src\main\java\com\janine\pojo" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Works\MyBabyLearning\src\main\java\com\janine\mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.OrderMapperTest.getOrderList">
+    <configuration name="OrderMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBabyLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.janine.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.janine.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.janine.mapper.OrderMapperTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderMapperTest.getOrderList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBabyLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.janine.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.janine.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.janine.mapper.OrderMapperTest" />
+      <option name="METHOD_NAME" value="getOrderList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderMapperTest.getOrderUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBabyLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.janine.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.janine.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.janine.mapper.OrderMapperTest" />
+      <option name="METHOD_NAME" value="getOrderUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderMapperTest.getOrderUserMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBabyLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.janine.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.janine.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.janine.mapper.OrderMapperTest" />
+      <option name="METHOD_NAME" value="getOrderUserMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.getUserOrderMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyBabyLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.janine.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.janine.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.janine.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="getUserOrderMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.OrderMapperTest.getOrderUser" />
+      <item itemvalue="JUnit.OrderMapperTest.getOrderUserMap" />
+      <item itemvalue="JUnit.UserMapperTest.getUserOrderMap" />
+      <item itemvalue="JUnit.OrderMapperTest" />
+      <item itemvalue="JUnit.OrderMapperTest.getOrderList" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OrderMapperTest.getOrderList" />
+        <item itemvalue="JUnit.OrderMapperTest" />
+        <item itemvalue="JUnit.UserMapperTest.getUserOrderMap" />
+        <item itemvalue="JUnit.OrderMapperTest.getOrderUserMap" />
+        <item itemvalue="JUnit.OrderMapperTest.getOrderUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46dce061-6ce3-43b0-9239-a778fcb5cefe" name="Default Changelist" comment="" />
+      <created>1544165282775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544165282775</updated>
+      <workItem from="1544165284176" duration="10910000" />
+      <workItem from="1544405528712" duration="12311000" />
+      <workItem from="1544491666130" duration="23580000" />
+      <workItem from="1544577778101" duration="700000" />
+      <workItem from="1546495514445" duration="3468000" />
+      <workItem from="1546588515161" duration="1870000" />
+      <workItem from="1546826144409" duration="289000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 47m 44s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 49m 33s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 50m 11s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 50m 18s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 50m 56s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 51m 51s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 58m 02s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserMapperTest_getUserOrderMap - 2018.12.11 at 17h 58m 45s.xml">
+      <configuration name="UserMapperTest.getUserOrderMap" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderMapperTest - 2019.01.04 at 15h 55m 40s.xml">
+      <configuration name="OrderMapperTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderMapperTest_getOrderList - 2019.01.04 at 15h 55m 59s.xml">
+      <configuration name="OrderMapperTest.getOrderList" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53128000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18605818" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="JRebel" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285273" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2601036" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32917964" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Executor" order="12" />
+      <window_info anchor="bottom" id="JRebel Console" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3291592" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://F:/Java/视频/13-Mybatis(学习2天)/MyBatis_day01;mybatis简介--入门/MyBatis_day01;mybatis简介--入门/mybatis-day1入门-原生Dao动态Dao开发.sqlconfig.xml配置介绍/01课前资料/案例/sql/mybatis.sql" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/janine/other/FirstUseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mybaby/UserMapper.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/janine/traditional/dao/impl/UserDaoImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapperImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/janine/mapper/UserMapperImplTest.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="268" selection-start-line="268" selection-end-line="268" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/mybaby/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/traditional/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="19" column="58" lean-forward="true" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/traditional/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/SqlMapConfig" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/pojo/QueryVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/pojo/OrderUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/pojo/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/janine/mapper/UserMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="854">
+          <caret line="84" column="39" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyBabyLearning.iml" />
+    <entry file="file://$PROJECT_DIR$/src/main/res/mybaby/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/util/SqlSessionFactoryUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/janine/mapper/OrderMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/SqlMapConfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="110" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/other/FirstUse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/janine/mapper/OrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="61" column="55" lean-forward="true" selection-start-line="61" selection-start-column="55" selection-end-line="61" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.16741405" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MyBabyLearning</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.16741405" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.2.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.16741405" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

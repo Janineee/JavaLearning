@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--动态代理开发规则：
+    namespace必须是接口的全路径名！！！
+    接口的方法名必须与 sql id 一致
+    接口的入参与 parameterType 一致
+    接口的返回值与 resultType 一致
+-->
+
+<mapper namespace="com.janine.mapper.OrderMapper">
+
+    <!--定义resultmap-->
+    <resultMap id="order_list_map" type="Order">
+        <!--用于映射主键-->
+        <id property="id" column="id"/>
+        <!--普通字段用result映射-->
+        <result property="userId" column="user_id"/>
+        <result property="number" column="number"/>
+        <result property="createtime" column="createtime"/>
+        <result property="note" column="note"/>
+    </resultMap>
+
+    <!--使用resultmap-->
+    <select id="getOrderList" resultMap="order_list_map">
+        select *
+        from `order`
+    </select>
+    <select id="getOrderUser" resultType="com.janine.pojo.OrderUser">
+        select o.`id`, o.`user_id`, u.username, u.address
+
+        from `order` o
+                 left join `user` u on u.id = o.user_id
+    </select>
+
+    <resultMap id="order_user_map" type="Order">
+        <!--用于映射主键-->
+        <id property="id" column="id"/>
+        <!--普通字段用result映射-->
+        <result property="userId" column="user_id"/>
+        <result property="number" column="number"/>
+        <result property="createtime" column="createtime"/>
+        <result property="note" column="note"/>
+
+        <!--用于配置一对一关系-->
+        <!--property是order里的user属性-->
+        <!--javaType是那个属性的类型，可以用别名-->
+        <association property="user" javaType="com.janine.pojo.User">
+            <id property="id" column="id"/>
+            <result property="username" column="username"/>
+            <result property="address" column="address"/>
+
+        </association>
+    </resultMap>
+
+    <select id="getOrderUserMap" resultMap="order_user_map">
+        select o.`id`, o.`user_id`, u.username, u.address
+
+        from `order` o
+                 left join `user` u on u.id = o.user_id
+    </select>
+    
+
+</mapper>
