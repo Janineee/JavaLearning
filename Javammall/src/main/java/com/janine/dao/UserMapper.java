@@ -18,6 +18,8 @@ public interface UserMapper {
     
     int checkUsername(String username);
     
+    int checkEmail(String email);
+    
     // mybatis在传递多个参数时需要用到@param注解
     User selectLogin(@Param("username") String username, @Param("password") String password);
 }

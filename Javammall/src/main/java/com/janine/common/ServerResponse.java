@@ -33,7 +33,7 @@ public class ServerResponse<T> implements Serializable {
         this.status = status;
         this.msg = msg;
     }
-
+    
     
     // 不会显示在序列化后的json结果中
     @JsonIgnore
@@ -54,31 +54,31 @@ public class ServerResponse<T> implements Serializable {
     }
     
     
-    public static <T> ServerResponse<T> createBySucess(){
+    public static <T> ServerResponse<T> createBySucess() {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode());
     }
     
-    public static <T> ServerResponse<T> createBySucessMessage(String msg){
+    public static <T> ServerResponse<T> createBySucessMessage(String msg) {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode(), msg);
     }
     
-    public static <T> ServerResponse<T> createBySucess(T data){
+    public static <T> ServerResponse<T> createBySucess(T data) {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode(), data);
     }
     
-    public static <T> ServerResponse<T> createBySucess(String msg, T data){
+    public static <T> ServerResponse<T> createBySucess(String msg, T data) {
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode(), msg, data);
     }
     
-    public ServerResponse<T> createByError(){
-        return new ServerResponse<T>(ResponseCode.ERROR.getCode());
+    public static <T> ServerResponse<T> createByError() {
+        return new ServerResponse<T>(ResponseCode.ERROR.getCode(), ResponseCode.ERROR.getDesc());
     }
     
-    public static <T> ServerResponse<T> createByErrorMessage(String errorMessage){
+    public static <T> ServerResponse<T> createByErrorMessage(String errorMessage) {
         return new ServerResponse<T>(ResponseCode.ERROR.getCode(), errorMessage);
     }
     
-    public static <T> ServerResponse<T> createByErrorCodeMessage(int errorCode, String errorMessage){
+    public static <T> ServerResponse<T> createByErrorCodeMessage(int errorCode, String errorMessage) {
         return new ServerResponse<T>(errorCode, errorMessage);
     }
     
