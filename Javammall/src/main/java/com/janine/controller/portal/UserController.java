@@ -21,6 +21,7 @@ public class UserController {
     
     /**
      * 用户登录
+     *
      * @param username
      * @param password
      * @param session
@@ -28,12 +29,20 @@ public class UserController {
      */
     @RequestMapping(value = "login.do", method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<User> login(String username, String password, HttpSession session){
+    public ServerResponse<User> login(String username, String password, HttpSession session) {
         ServerResponse<User> response = iUserService.login(username, password);
-        if (response.isSuccess()){
+        if (response.isSuccess()) {
             session.setAttribute(Const.CURRENT_USER, response.getData());
         }
         
-        return null;
+        return response;
     }
+    
+    @RequestMapping(value = "logout.do", method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse<String> logout(HttpSession httpSession){
+        httpSession.removeAttribute(Const.CURRENT_USER);
+        return ServerResponse.createBySucess();
+    }
+    
 }
