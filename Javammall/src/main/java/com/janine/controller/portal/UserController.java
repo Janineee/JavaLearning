@@ -40,16 +40,22 @@ public class UserController {
     
     @RequestMapping(value = "logout.do", method = RequestMethod.GET)
     @ResponseBody
-    public ServerResponse<String> logout(HttpSession httpSession){
+    public ServerResponse<String> logout(HttpSession httpSession) {
         httpSession.removeAttribute(Const.CURRENT_USER);
         return ServerResponse.createBySucess();
     }
     
     @RequestMapping(value = "register.do", method = RequestMethod.GET)
     @ResponseBody
-    public ServerResponse<String> register(User user){
+    public ServerResponse<String> register(User user) {
         // 校验用户名存在
         return iUserService.register(user);
+    }
+    
+    @RequestMapping(value = "check_valid.do", method = RequestMethod.GET)
+    @ResponseBody
+    public ServerResponse<String> checkValid(String str, String type) {
+        return iUserService.checkValid(str, type);
     }
     
 }
