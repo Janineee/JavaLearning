@@ -91,8 +91,15 @@ public class UserController {
     
     @RequestMapping(value = "forget_reset_password.do", method = RequestMethod.GET)
     @ResponseBody
-    public ServerResponse<String> forgetResetPassword(String username, String passwordNew, String forgetToken){
+    public ServerResponse<String> forgetResetPassword(String username, String passwordNew, String forgetToken) {
         return iUserService.forgetResetPassword(username, passwordNew, forgetToken);
+    }
+    
+    public ServerResponse<String> resetPassword(HttpSession httpSession, String passwordOld, String passwordNew) {
+        User user = (User) httpSession.getAttribute(Const.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByErrorMessage("用户未登录");
+        }
     }
     
 }
