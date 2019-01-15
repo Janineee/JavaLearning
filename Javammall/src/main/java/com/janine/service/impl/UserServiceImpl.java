@@ -2,6 +2,7 @@ package com.janine.service.impl;
 
 import com.janine.common.Const;
 import com.janine.common.ServerResponse;
+import com.janine.common.TokenCache;
 import com.janine.dao.UserMapper;
 import com.janine.pojo.User;
 import com.janine.service.IUserService;
@@ -9,6 +10,8 @@ import com.janine.util.MD5Util;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 @Service("iUserService")
 public class UserServiceImpl implements IUserService {
@@ -63,6 +66,7 @@ public class UserServiceImpl implements IUserService {
     }
     
     // 校验
+    @Override
     public ServerResponse<String> checkValid(String str, String type) {
         if (StringUtils.isNoneBlank(type)) {
             // 开始校验
@@ -78,12 +82,41 @@ public class UserServiceImpl implements IUserService {
                     return ServerResponse.createByErrorMessage("email已存在");
                 }
             }
-            
         } else {
             return ServerResponse.createByErrorMessage("参数错误");
         }
         
         return ServerResponse.createByErrorMessage("校验成功");
+    }
+    
+    @Override
+    public ServerResponse<String> selectQuestion(String username) {
+        ServerResponse validResponse = this.checkValid(username, Const.USERNAME);
+        if (validResponse.isSuccess()) {
+            // 用户不存在
+            return ServerResponse.createByErrorMessage("用户不存在");
+        }
+        String question = userMapper.selectQuestionByUsername(username);
+        if (StringUtils.isNoneBlank(question)) {
+            return ServerResponse.createBySucess(question);
+        }
+        
+        return ServerResponse.createByErrorMessage("找不到用户");
+    }
+    
+    @Override
+    public ServerResponse<String> checkAnswer(String username, String question, String answer) {
+        int resultCount = userMapper.checkAnswer(username, question, answer);
+        if (resultCount > 0) {
+            // 说明答案正确,生成一个几乎不可能重复的字符串
+            String forgetToken = UUID.randomUUID().toString();
+            
+            // 缓存
+            TokenCache.setKey("token_" + username, forgetToken);
+            return ServerResponse.createBySucess(forgetToken);
+        }
+        
+        return ServerResponse.createByErrorMessage("问题的答案错误");
     }
     
     
