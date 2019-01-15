@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TokenCache {
     private static Logger logger = LoggerFactory.getLogger(TokenCache.class);
+    public static final String TOKEN_PREFIX = "token_";
     
     // 本地缓存，初始化1000，最大缓存10000，如果超过就会使用LRU算法清除，有效期是12小时
     private static LoadingCache<String, String> localCache = CacheBuilder
