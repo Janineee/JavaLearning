@@ -2,6 +2,7 @@ package com.janine.controller;
 
 import com.janine.pojo.Area;
 import com.janine.service.AreaService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,12 +18,17 @@ import java.util.Map;
 @RequestMapping("/superadmin")
 public class AreaController {
     
+    org.slf4j.Logger logger = LoggerFactory.getLogger(AreaController.class);
+    
     @Autowired
     private AreaService areaService;
     
     @RequestMapping(value = "listarea", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> listArea() {
+        logger.info("===start===");
+        long startTime = System.currentTimeMillis();
+        
         Map<String, Object> modelMap = new HashMap<String, Object>();
         List<Area> areaList = new ArrayList<Area>();
         
@@ -36,6 +42,10 @@ public class AreaController {
             modelMap.put("errMsg", e.toString());
         }
         
+        logger.error("test error!");
+        long endTime = System.currentTimeMillis();
+        logger.debug("costTime:[{}ms]", endTime - startTime);
+        logger.info("===end===");
         return modelMap;
     }
 }

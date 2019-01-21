@@ -43,13 +43,26 @@
 
 
         <!-- 1.日志 -->
-        <!-- 实现slf4j接口并整合 -->
+        <!--想在 Java 程序中使用 Logback，需要依赖三个 jar 包，
+        分别是 slf4j-api，logback-core，logback-classic。
+        其中 slf4j-api 并不是 Logback 的一部分，是另外一个项目，
+        但是强烈建议将 slf4j 与 Logback 结合使用。-->
+        <!--<dependency>-->
+            <!--<groupId>org.slf4j</groupId>-->
+            <!--<artifactId>slf4j-api</artifactId>-->
+            <!--<version>1.7.25</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
-            <scope>test</scope>
         </dependency>
+
 
         <!-- 2.数据库 -->
         <dependency>
