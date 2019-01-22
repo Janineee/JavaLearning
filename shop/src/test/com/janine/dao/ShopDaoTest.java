@@ -50,6 +50,37 @@ class ShopDaoTest extends BaseTest {
         
         int effectedNum = shopDao.insertShop(shop);
         Assertions.assertEquals(1, effectedNum);
-        
     }
+    
+    @Test
+    public void updateShopTest() {
+        Shop shop = new Shop();
+        shop.setShopId(1L);
+        PersonInfo owner = new PersonInfo();
+        Area area = new Area();
+        ShopCategory shopCategory = new ShopCategory();
+        
+        owner.setUserId(1L);
+        area.setAreaId(2);
+        shopCategory.setShopCategoryId(1L);
+        shop.setOwner(owner);
+        shop.setArea(area);
+        shop.setShopCategory(shopCategory);
+        // 创造虚假数据
+        TextProducer textProducer = fairy.textProducer();
+        Person person = fairy.person();
+        shop.setShopName("测试店铺1");
+        shop.setShopDesc("我已经是一个修改过的描述了呢=v=");
+        shop.setShopAddr(person.getAddress().getAddressLine1());
+        shop.setPhone(person.getTelephoneNumber());
+        shop.setShopImg("test img");
+        shop.setCreateTime(new Date());
+        shop.setLastEditTime(new Date());
+        shop.setEnableStatus(1);
+        shop.setAdvice("审核中");
+        
+        int effectedNum = shopDao.updateShop(shop);
+        Assertions.assertEquals(1, effectedNum);
+    }
+    
 }
