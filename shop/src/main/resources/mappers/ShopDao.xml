@@ -15,7 +15,9 @@
 	      #{phone},
 	      #{shopImg},
 	      #{priority},
-	      #{createTime},
-	      #{lastEditTime})
+	      now(),
+	      now(),
+	      #{enableStatus},
+	      #{advice})
     </insert>
 </mapper>
